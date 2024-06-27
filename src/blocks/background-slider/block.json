@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "occ/rather-simple-background-slider",
+	"title": "Rather Simple Background Slider",
+    "description": "Display a background slider.",
+	"textdomain": "rather-simple-background-slider",
+	"category": "media",
+    "attributes": {
+		"images": {
+			"type": "array",
+			"items": {
+				"type": "integer"
+			},
+			"default": []
+		}
+    },
+    "editorScript": "file:./index.js",
+	"viewScript": "file:./view.js",
+    "style": "file:./style-index.css",
+	"editorStyle": "file:./index.css"
+}
