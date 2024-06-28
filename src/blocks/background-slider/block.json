@@ -15,6 +15,9 @@
 			"default": []
 		}
     },
+	"supports": {
+		"multiple": false
+	},
     "editorScript": "file:./index.js",
 	"viewScript": "file:./view.js",
     "style": "file:./style-index.css",
