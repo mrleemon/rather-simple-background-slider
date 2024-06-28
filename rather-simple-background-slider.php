@@ -113,24 +113,44 @@ class Rather_Simple_Background_Slider_Block {
 	public function render_block( $attributes ) {
 		$block_props = get_block_wrapper_attributes();
 
-		$html = '<figure ' . wp_kses_data( $block_props ) . '>
-				<div class="carousel-wrapper">
-				<div class="carousel-frame">
-				<div class="carousel-items">';
+		//$html = '<figure ' . wp_kses_data( $block_props ) . '>';
 
-		foreach ( $attributes['images'] as $image ) {
-			$html .= '<div class="carousel-item">
-				<figure>';
-			$img   = wp_get_attachment_image_src( $image, 'full', false );
-			$html .= '<img loading="lazy" src="' . esc_url( $img[0] ) . '" alt="" />';
-			$html .= '</figure>
-			</div>';
+
+		$html = '';
+
+		$args = array(
+			'post_type'      => 'attachment',
+			'numberposts'    => -1,
+			'post_status'    => null,
+			'post_parent'    => get_the_ID(),
+			'post_mime_type' => 'image',
+			'orderby'        => 'rand',
+		);
+
+		$list        = '';
+		$attachments = get_posts( $args );
+		if ( $attachments ) {
+			foreach ( $attachments as $attachment ) {
+				$image_attributes = wp_get_attachment_image_src( $attachment->ID, 'full' );
+				$list             = $list . '{ src:"' . $image_attributes[0] . '" },';
+			}
 		}
+		$list = rtrim( $list, ',' );
 
-		$html .= '</div>
-				</div>';
+		$selector = apply_filters( 'rsbs_selector', 'body' );
 
-		$html .= '</figure>';
+		$html .= '<script>
+            jQuery( function( $ ) {
+                $( "' . wp_strip_all_tags( $selector ) . '" ).vegas( {
+                    slides: [' . $list . '],
+                    delay: 15000,
+                    timer: false
+                } );
+            } );
+            </script>';
+
+		return $html;
+	}
 
 		return $html;
 	}
