@@ -1,29 +1,28 @@
-import { Swiper } from 'swiper';
-import { Autoplay, EffectFade } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/effect-fade';
+import 'vegas';
+import 'vegas/dist/vegas.css';
 
-document.addEventListener('DOMContentLoaded', function (e) {
+(function ($) {
 
-	document.querySelectorAll('.wp-block-occ-rather-simple-background-slider').forEach(function (item) {
+	$(function () {
 
-		var main = item.querySelector('.slider');
-		var swiper = new Swiper(main, {
-			modules: [Autoplay, EffectFade],
-			loop: true,
-			effect: 'fade',
-			fadeEffect: {
-				crossFade: true
-			},
-			centeredSlides: false,
-			autoHeight: false,
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-				pauseOnMouseEnter: false,
-			}
+		$('.wp-block-occ-rather-simple-background-slider').each(function () {
+			var images = $(this).data('images');
+
+			// Convert array of strings to array of objects
+			let slides = images.map(image => {
+				return { src: image.url };
+			});
+
+			// Initialize Vegas plugin with converted slides array
+			$('body').vegas({
+				slides: slides,
+				delay: 15000,
+				timer: false
+			});
+
 		});
+
 
 	});
 
-});
+})(jQuery);

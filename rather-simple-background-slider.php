@@ -113,47 +113,14 @@ class Rather_Simple_Background_Slider_Block {
 	public function render_block( $attributes ) {
 		$block_props = get_block_wrapper_attributes();
 
-		//$html = '<figure ' . wp_kses_data( $block_props ) . '>';
-
-
-		$html = '';
-
-		$args = array(
-			'post_type'      => 'attachment',
-			'numberposts'    => -1,
-			'post_status'    => null,
-			'post_parent'    => get_the_ID(),
-			'post_mime_type' => 'image',
-			'orderby'        => 'rand',
-		);
-
-		$list        = '';
-		$attachments = get_posts( $args );
-		if ( $attachments ) {
-			foreach ( $attachments as $attachment ) {
-				$image_attributes = wp_get_attachment_image_src( $attachment->ID, 'full' );
-				$list             = $list . '{ src:"' . $image_attributes[0] . '" },';
-			}
-		}
-		$list = rtrim( $list, ',' );
+		$html = '<div ' . wp_kses_data( $block_props ) . ' data-images="' . esc_attr( wp_json_encode( $attributes['images'] ) ) . '">';
 
 		$selector = apply_filters( 'rsbs_selector', 'body' );
 
-		$html .= '<script>
-            jQuery( function( $ ) {
-                $( "' . wp_strip_all_tags( $selector ) . '" ).vegas( {
-                    slides: [' . $list . '],
-                    delay: 15000,
-                    timer: false
-                } );
-            } );
-            </script>';
-
-		return $html;
-	}
+		$html .= '</div>';
 
 		return $html;
 	}
 }
 
-add_action( 'plugins_loaded', array( Rather_Simple_Carousel_Block::get_instance(), 'plugin_setup' ) );
+add_action( 'plugins_loaded', array( Rather_Simple_Background_Slider_Block::get_instance(), 'plugin_setup' ) );

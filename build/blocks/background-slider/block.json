@@ -10,13 +10,19 @@
     "images": {
       "type": "array",
       "items": {
-        "type": "integer"
+        "type": "object"
       },
       "default": []
     }
   },
+  "supports": {
+    "multiple": false
+  },
   "editorScript": "file:./index.js",
   "viewScript": "file:./view.js",
-  "style": "file:./style-index.css",
+  "style": [
+    "file:./style-index.css",
+    "file:./view.css"
+  ],
   "editorStyle": "file:./index.css"
 }

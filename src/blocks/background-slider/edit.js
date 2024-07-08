@@ -30,24 +30,13 @@ const Edit = (props) => {
         setAttributes,
     } = props;
 
-    const { attachments } = useSelect(select => {
-        const query = {
-            include: images.join(','),
-            per_page: images.length,
-            orderby: 'include'
-        };
-        return {
-            attachments: select('core').getMediaItems(query, { context: 'view' }),
-        }
-    }, [images]);
-
     const displayImages = (images) => {
         return (
             images.map((image, index) => {
                 return (
                     <div className="carousel-item" key={index}>
                         <figure>
-                            <img src={image.source_url} alt={image.alt_text} key={image.id} />
+                            <img src={image.url} alt={image.alt} key={image.id} />
                         </figure>
                     </div>
                 )
@@ -55,9 +44,16 @@ const Edit = (props) => {
         )
     };
 
-    function setImages(media) {
-        const imageIDs = media.map(image => image.id);
-        setAttributes({ images: imageIDs })
+    function setImages(value) {
+        const imageDetails = value.map(image => (
+			{
+				id: image.id,
+				url: image.url,
+				alt: image.alt,
+				caption: image.caption
+			}
+		));
+		setAttributes({ images: imageDetails })
     }
 
     return (
@@ -88,13 +84,13 @@ const Edit = (props) => {
                 )}
             </BlockControls>
             <MediaUploadCheck>
-                {attachments && attachments.length > 0 ?
+                {images.length > 0 ?
                     <figure {...blockProps}>
                         <div className="carousel-wrapper" ref={ref}>
                             <div className="carousel-frame">
                                 <div className="carousel-items">
                                     {
-                                        displayImages(attachments)
+                                        displayImages(images)
                                     }
                                 </div>
                             </div>
