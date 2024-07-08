@@ -86,14 +86,10 @@ const Edit = (props) => {
             <MediaUploadCheck>
                 {images.length > 0 ?
                     <figure {...blockProps}>
-                        <div className="carousel-wrapper" ref={ref}>
-                            <div className="carousel-frame">
-                                <div className="carousel-items">
-                                    {
-                                        displayImages(images)
-                                    }
-                                </div>
-                            </div>
+                        <div className="background-slider-items">
+                            {
+                                displayImages(images)
+                            }
                         </div>
                     </figure>
                     :
