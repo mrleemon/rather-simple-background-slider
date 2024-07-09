@@ -15,6 +15,7 @@ import {
  */
 import metadata from './block.json';
 import Edit from './edit';
+import transforms from './transforms';
 
 import './editor.scss';
 import './style.scss';
@@ -31,6 +32,7 @@ export const settings = {
 	},
 
 	edit: Edit,
+	transforms
 };
 
 registerBlockType(name, settings);
