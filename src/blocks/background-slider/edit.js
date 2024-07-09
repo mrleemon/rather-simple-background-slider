@@ -85,7 +85,7 @@ const Edit = (props) => {
                                 onSelect={setImages}
                                 render={({ open }) => (
                                     <ToolbarButton onClick={open}>
-                                        {__('Edit images', 'rather-simple-background-sliders')}
+                                        {__('Edit images', 'rather-simple-background-slider')}
                                     </ToolbarButton>)}
                             />
                         </MediaUploadCheck>
