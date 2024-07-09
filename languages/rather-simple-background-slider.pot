@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-07-09T15:13:25+00:00\n"
+"POT-Creation-Date: 2024-07-09T22:26:43+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.8.1\n"
 "X-Domain: rather-simple-background-slider\n"
@@ -37,6 +37,7 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
+#: build/blocks/background-slider/index.js:1
 #: src/blocks/background-slider/edit.js:88
 msgid "Edit images"
 msgstr ""
