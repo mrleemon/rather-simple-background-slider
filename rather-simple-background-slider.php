@@ -113,10 +113,7 @@ class Rather_Simple_Background_Slider_Block {
 	public function render_block( $attributes ) {
 		$block_props = get_block_wrapper_attributes();
 
-		$html = '<div ' . wp_kses_data( $block_props ) . ' data-images="' . esc_attr( wp_json_encode( $attributes['images'] ) ) . '">';
-
-		$selector = apply_filters( 'rsbs_selector', 'body' );
-
+		$html  = '<div ' . wp_kses_data( $block_props ) . ' data-images="' . esc_attr( wp_json_encode( $attributes['images'] ) ) . '">';
 		$html .= '</div>';
 
 		return $html;
