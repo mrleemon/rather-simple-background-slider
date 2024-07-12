@@ -102,18 +102,20 @@ const Edit = (props) => {
                         </div>
                     </figure>
                     :
-                    <MediaPlaceholder
-                        accept="image/*"
-                        allowedTypes={['image']}
-                        onSelect={setImages}
-                        multiple={true}
-                        gallery={true}
-                        addToGallery={true}
-                        handleUpload={true}
-                        labels={
-                            { title: __('Rather Simple Background Slider', 'rather-simple-background-slider') }
-                        }
-                    />
+                    <div {...blockProps}>
+                        <MediaPlaceholder
+                            accept="image/*"
+                            allowedTypes={['image']}
+                            onSelect={setImages}
+                            multiple={true}
+                            gallery={true}
+                            addToGallery={true}
+                            handleUpload={true}
+                            labels={
+                                { title: __('Rather Simple Background Slider', 'rather-simple-background-slider') }
+                            }
+                        />
+                    </div>
                 }
             </MediaUploadCheck>
         </>
