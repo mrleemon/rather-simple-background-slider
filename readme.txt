@@ -2,7 +2,7 @@
 Contributors: leemon
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=oscarciutat%40gmail%2ecom
 Tags: slider, slideshow, background, fullscreen, media, images, attachments
-Requires at least: 6.3
+Requires at least: 6.6
 Tested up to: 6.3
 Stable tag: 1.0
 License: GPLv2 or later
