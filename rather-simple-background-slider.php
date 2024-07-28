@@ -108,12 +108,12 @@ class Rather_Simple_Background_Slider_Block {
 	/**
 	 * Renders block
 	 *
-	 * @param array $attributes     The array of attributes for this block.
+	 * @param array $attrs     The array of attributes for this block.
 	 */
-	public function render_block( $attributes ) {
+	public function render_block( $attrs ) {
 		$block_props = get_block_wrapper_attributes();
 
-		$html  = '<div ' . wp_kses_data( $block_props ) . ' data-images="' . esc_attr( wp_json_encode( $attributes['images'] ) ) . '">';
+		$html  = '<div ' . wp_kses_data( $block_props ) . ' data-settings="' . esc_attr( wp_json_encode( $attrs ) ) . '">';
 		$html .= '</div>';
 
 		return $html;

@@ -6,7 +6,8 @@ import 'vegas/dist/vegas.css';
 	$(function () {
 
 		$('.wp-block-occ-rather-simple-background-slider').each(function () {
-			var images = $(this).data('images');
+			var settings = $(this).data('settings');
+			var images = settings.images;
 
 			// Convert array of strings to array of objects
 			let slides = images.map(image => {
