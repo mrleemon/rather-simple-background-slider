@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: Rather Simple Background Slider 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rather-simple-"
 "background-slider-block\n"
-"POT-Creation-Date: 2024-07-09T22:26:43+00:00\n"
-"PO-Revision-Date: 2024-07-10 00:27+0200\n"
+"POT-Creation-Date: 2024-07-29T13:06:58+00:00\n"
+"PO-Revision-Date: 2024-07-29 15:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ca\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: build/blocks/background-slider/index.js:1
-#: src/blocks/background-slider/edit.js:114
+#: src/blocks/background-slider/edit.js:128
 msgid "Rather Simple Background Slider"
 msgstr ""
 
@@ -36,12 +36,22 @@ msgid "http://oscarciutat.com/code/"
 msgstr ""
 
 #: build/blocks/background-slider/index.js:1
-#: src/blocks/background-slider/edit.js:72
+#: src/blocks/background-slider/edit.js:77
 msgid "Settings"
 msgstr "Opcions"
 
 #: build/blocks/background-slider/index.js:1
-#: src/blocks/background-slider/edit.js:88
+#: src/blocks/background-slider/edit.js:80
+msgid "Delay"
+msgstr "Retard"
+
+#: build/blocks/background-slider/index.js:1
+#: src/blocks/background-slider/edit.js:85
+msgid "Set the delay between images in seconds."
+msgstr "Establiu el retard entre imatges en segons."
+
+#: build/blocks/background-slider/index.js:1
+#: src/blocks/background-slider/edit.js:101
 msgid "Edit images"
 msgstr "Edita les imatges"
 
