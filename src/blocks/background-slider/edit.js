@@ -59,8 +59,8 @@ const Edit = (props) => {
     }
 
     const setDelay = (value) => {
-		setAttributes({ delay: value })
-	}
+        setAttributes({ delay: value })
+    }
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -80,8 +80,9 @@ const Edit = (props) => {
                         label={__('Delay', 'rather-simple-background-slider')}
                         min="1"
                         max="30"
-						onChange={setDelay}
-						value={delay}
+                        onChange={setDelay}
+                        value={delay}
+                        help={__('Set the delay between images in seconds.', 'rather-simple-background-slider')}
                     />
                 </PanelBody>
             </InspectorControls>
