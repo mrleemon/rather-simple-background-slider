@@ -5,6 +5,7 @@ import { __ } from '@wordpress/i18n';
 import {
     ToolbarGroup,
     ToolbarButton,
+    RangeControl,
     PanelBody,
 } from '@wordpress/components';
 import {
@@ -27,7 +28,7 @@ const Edit = (props) => {
 
     const blockProps = useBlockProps();
     const {
-        attributes: { images },
+        attributes: { images, delay },
         setAttributes,
     } = props;
 
@@ -57,13 +58,17 @@ const Edit = (props) => {
         setAttributes({ images: imageDetails })
     }
 
+    const setDelay = (value) => {
+		setAttributes({ delay: value })
+	}
+
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 15000);
+        }, delay * 1000);
 
         return () => clearInterval(interval);
-    }, [images.length]);
+    }, [images.length, delay]);
 
     return (
         <>
@@ -71,6 +76,13 @@ const Edit = (props) => {
                 <PanelBody
                     title={__('Settings', 'rather-simple-background-slider')}
                 >
+                    <RangeControl
+                        label={__('Delay', 'rather-simple-background-slider')}
+                        min="1"
+                        max="30"
+						onChange={setDelay}
+						value={delay}
+                    />
                 </PanelBody>
             </InspectorControls>
             <BlockControls>

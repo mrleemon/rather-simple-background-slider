@@ -13,13 +13,20 @@
         "type": "object"
       },
       "default": []
+    },
+    "delay": {
+      "type": "integer",
+      "default": 5
     }
   },
   "supports": {
     "multiple": false
   },
   "editorScript": "file:./index.js",
-  "viewScript": "file:./view.js",
+  "viewScript": [
+    "jquery",
+    "file:./view.js"
+  ],
   "style": [
     "file:./style-index.css",
     "file:./view.css"
