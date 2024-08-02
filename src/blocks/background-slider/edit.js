@@ -56,6 +56,7 @@ const Edit = (props) => {
             }
         ));
         setAttributes({ images: imageDetails })
+        setCurrentIndex(0);
     }
 
     const setDelay = (value) => {
@@ -68,7 +69,7 @@ const Edit = (props) => {
         }, delay * 1000);
 
         return () => clearInterval(interval);
-    }, [images.length, delay]);
+    }, [images, delay]);
 
     return (
         <>
