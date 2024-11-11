@@ -24,10 +24,7 @@
     "multiple": false
   },
   "editorScript": "file:./index.js",
-  "viewScript": [
-    "jquery",
-    "file:./view.js"
-  ],
+  "viewScript": "file:./view.js",
   "style": [
     "file:./style-index.css",
     "file:./view.css"

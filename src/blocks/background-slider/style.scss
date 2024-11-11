@@ -1,0 +1,36 @@
+.wp-block-occ-rather-simple-background-slider {
+
+	.swiper {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+
+		.swiper-slide img {
+			object-fit: cover;
+			height: 100vh;
+		}
+
+		.swiper-button-prev,
+		.swiper-button-next {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 50%;
+			height: 100%;
+
+			&::after {
+				content: '';
+			}
+		}
+
+		.swiper-button-prev {
+			left: 0;
+		}
+
+		.swiper-button-next {
+			right: 0;
+		}
+	}
+}

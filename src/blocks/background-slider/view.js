@@ -1,28 +1,36 @@
-import 'vegas';
-import 'vegas/dist/vegas.css';
+import { Swiper } from 'swiper';
+import { Autoplay, Navigation, EffectFade } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
 
-(function ($) {
+document.addEventListener('DOMContentLoaded', function (e) {
 
-	$(function () {
+	document.querySelectorAll('.wp-block-occ-rather-simple-background-slider').forEach(function (item) {
 
-		$('.wp-block-occ-rather-simple-background-slider').each(function () {
-			var settings = $(this).data('settings');
+		var settings = JSON.parse(item.dataset.settings);
+		console.log(settings);
 
-			// Convert array of strings to array of objects
-			let slides = settings.images.map(image => {
-				return { src: image.url };
-			});
-
-			// Initialize Vegas plugin with converted slides array
-			$('body').vegas({
-				slides: slides,
+		var main = item.querySelector('.swiper');
+		var mainSwiper = new Swiper(main, {
+			modules: [Autoplay, Navigation, EffectFade],
+			autoplay: {
 				delay: settings.delay * 1000,
-				timer: false
-			});
-
+				disableOnInteraction: false
+			},
+			effect: 'fade',
+			fadeEffect: {
+				crossFade: true
+			},
+			speed: 600,
+			loop: true,
+			navigation: {
+				prevEl: '.swiper-button-prev',
+				nextEl: '.swiper-button-next'
+			}
 		});
-
 
 	});
 
-})(jQuery);
+});

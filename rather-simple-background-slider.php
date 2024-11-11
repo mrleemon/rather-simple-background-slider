@@ -113,8 +113,32 @@ class Rather_Simple_Background_Slider_Block {
 	public function render_block( $attrs ) {
 		$block_props = get_block_wrapper_attributes();
 
-		$html  = '<div ' . wp_kses_data( $block_props ) . ' data-settings="' . esc_attr( wp_json_encode( $attrs ) ) . '">';
-		$html .= '</div>';
+		$params = array(
+			'delay' => $attrs['delay'],
+		);
+
+		$html = '<figure ' . wp_kses_data( $block_props ) . ' data-settings="' . esc_attr( wp_json_encode( $params ) ) . '">';
+
+		$html .= '<div class="swiper">
+			<div class="swiper-wrapper">';
+
+		foreach ( $attrs['images'] as $image ) {
+			$html .= '<div class="swiper-slide">' . wp_get_attachment_image(
+				$image['id'],
+				'full',
+				null,
+				array(
+					'sizes' => 'calc(100vh * 1.78)',
+				)
+			) . '
+			</div>';
+		}
+
+		$html .= '</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+			</figure>';
 
 		return $html;
 	}
