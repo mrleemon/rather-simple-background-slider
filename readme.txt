@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=oscar
 Tags: slider, slideshow, background, fullscreen, media, images, attachments
 Requires at least: 6.6
 Tested up to: 6.3
-Stable tag: 1.0
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,5 +38,8 @@ License: The MIT License (MIT)
 Source: https://swiperjs.com/
 
 == Changelog ==
+= 2.0 =
+* Replace Vegas lib with Swiper lib
+
 = 1.0 =
 * Initial release
