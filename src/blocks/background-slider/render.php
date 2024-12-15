@@ -3,14 +3,14 @@
 $block_props = get_block_wrapper_attributes();
 
 $params = array(
-	'delay' => $attrs['delay'],
+	'delay' => $attributes['delay'],
 );
 
 ?>
 <figure <?php echo wp_kses_data( $block_props ); ?> data-settings="<?php echo esc_attr( wp_json_encode( $params ) ); ?>">
 	<div class="swiper">
 		<div class="swiper-wrapper">
-			<?php foreach ( $attrs['images'] as $image ) : ?>
+			<?php foreach ( $attributes['images'] as $image ) : ?>
 				<div class="swiper-slide">
 					<?php
 					echo wp_get_attachment_image(
