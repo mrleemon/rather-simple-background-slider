@@ -29,5 +29,6 @@
 		"file:./style-index.css",
 		"file:./view.css"
 	],
-	"editorStyle": "file:./index.css"
+	"editorStyle": "file:./index.css",
+	"render": "file:./render.php"
 }

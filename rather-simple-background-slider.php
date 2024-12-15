@@ -92,55 +92,12 @@ class Rather_Simple_Background_Slider_Block {
 			return;
 		}
 
-		// Register the block by passing the location of block.json to register_block_type.
-		register_block_type(
-			__DIR__ . '/build/blocks/background-slider',
-			array(
-				'render_callback' => array( $this, 'render_block' ),
-			)
-		);
+		// Register the block.
+		register_block_type( __DIR__ . '/build/blocks/background-slider' );
 
 		// Load translations.
 		$script_handle = generate_block_asset_handle( 'occ/rather-simple-background-slider', 'editorScript' );
 		wp_set_script_translations( $script_handle, 'rather-simple-background-slider', plugin_dir_path( __FILE__ ) . 'languages' );
-	}
-
-	/**
-	 * Renders block
-	 *
-	 * @param array $attrs     The array of attributes for this block.
-	 */
-	public function render_block( $attrs ) {
-		$block_props = get_block_wrapper_attributes();
-
-		$params = array(
-			'delay' => $attrs['delay'],
-		);
-
-		$html = '<figure ' . wp_kses_data( $block_props ) . ' data-settings="' . esc_attr( wp_json_encode( $params ) ) . '">';
-
-		$html .= '<div class="swiper">
-			<div class="swiper-wrapper">';
-
-		foreach ( $attrs['images'] as $image ) {
-			$html .= '<div class="swiper-slide">' . wp_get_attachment_image(
-				$image['id'],
-				'full',
-				null,
-				array(
-					'sizes' => 'calc(100vh * 1.78)',
-				)
-			) . '
-			</div>';
-		}
-
-		$html .= '</div>
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
-			</div>
-			</figure>';
-
-		return $html;
 	}
 }
 
