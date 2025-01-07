@@ -26,6 +26,6 @@ $params = array(
 			<?php endforeach; ?>
 		</div>
 		<div class="swiper-button-prev" tabindex="-1" role="button" aria-label="Previous slide"></div>
-		<div class="swiper-button-next" tabindex="-1" role="button"aria-label="Next slide"></div>
+		<div class="swiper-button-next" tabindex="-1" role="button" aria-label="Next slide"></div>
 	</div>
 </figure>
