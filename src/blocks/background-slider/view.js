@@ -1,5 +1,5 @@
 import { Swiper } from 'swiper';
-import { Autoplay, Navigation, EffectFade } from 'swiper/modules';
+import { Autoplay, Navigation, EffectFade, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/navigation';
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
 		var main = item.querySelector('.swiper');
 		var mainSwiper = new Swiper(main, {
-			modules: [Autoplay, Navigation, EffectFade],
+			modules: [Autoplay, Navigation, EffectFade, A11y],
 			autoplay: {
 				delay: settings.delay * 1000,
 				disableOnInteraction: false
@@ -28,6 +28,9 @@ document.addEventListener('DOMContentLoaded', function (e) {
 			navigation: {
 				prevEl: '.swiper-button-prev',
 				nextEl: '.swiper-button-next'
+			},
+			a11y: {
+				enabled: true
 			}
 		});
 
