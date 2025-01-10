@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
 				prevEl: '.swiper-button-prev',
 				nextEl: '.swiper-button-next'
 			},
+			resizeObserver: false,
 			a11y: {
 				enabled: true
 			}
