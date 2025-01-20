@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function (e) {
 	document.querySelectorAll('.wp-block-occ-rather-simple-background-slider').forEach(function (item) {
 
 		var settings = JSON.parse(item.dataset.settings);
-		console.log(settings);
 
 		var main = item.querySelector('.swiper');
 		var mainSwiper = new Swiper(main, {
