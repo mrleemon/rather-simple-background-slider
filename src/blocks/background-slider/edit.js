@@ -87,8 +87,8 @@ const Edit = (props) => {
                     />
                 </PanelBody>
             </InspectorControls>
-            <BlockControls>
-                {images.length > 0 && (
+            {images.length > 0 && (
+                <BlockControls>
                     <ToolbarGroup>
                         <MediaUploadCheck>
                             <MediaUpload
@@ -104,8 +104,8 @@ const Edit = (props) => {
                             />
                         </MediaUploadCheck>
                     </ToolbarGroup>
-                )}
-            </BlockControls>
+                </BlockControls>
+            )}
             <MediaUploadCheck>
                 {images.length > 0 ?
                     <figure {...blockProps}>
