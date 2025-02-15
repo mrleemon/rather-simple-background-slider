@@ -5,10 +5,10 @@
   "main": "build/index.js",
   "dependencies": {
     "npm-check-updates": "^17.1.14",
-    "swiper": "^11.2.1"
+    "swiper": "^11.2.4"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^30.9.0"
+    "@wordpress/scripts": "^30.11.0"
   },
   "scripts": {
     "build": "wp-scripts build",
