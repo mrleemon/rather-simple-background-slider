@@ -9,6 +9,7 @@
  * Author: Oscar Ciutat
  * Author URI: http://oscarciutat.com/code/
  * Text Domain: rather-simple-background-slider
+ * Domain Path: /languages
  * Description: A really simple background-slider
  * License: GPLv2 or later
  *
