@@ -4,7 +4,7 @@
  * Plugin URI:
  * Update URI: false
  * Version: 2.0
- * Requires at least: 6.6
+ * Requires at least: 6.8
  * Requires PHP: 7.4
  * Author: Oscar Ciutat
  * Author URI: http://oscarciutat.com/code/

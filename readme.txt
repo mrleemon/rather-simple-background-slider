@@ -2,8 +2,8 @@
 Contributors: leemon
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=oscarciutat%40gmail%2ecom
 Tags: slider, slideshow, background, fullscreen, media, images, attachments
-Requires at least: 6.6
-Tested up to: 6.3
+Requires at least: 6.8
+Tested up to: 6.8
 Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
