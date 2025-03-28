@@ -60,7 +60,6 @@ class Rather_Simple_Background_Slider_Block {
 
 		$this->includes();
 
-		add_action( 'init', array( $this, 'load_language' ) );
 		add_action( 'init', array( $this, 'register_block' ) );
 	}
 
@@ -73,13 +72,6 @@ class Rather_Simple_Background_Slider_Block {
 	 * Includes required core files used in admin and on the frontend.
 	 */
 	protected function includes() {}
-
-	/**
-	 * Loads language
-	 */
-	public function load_language() {
-		load_plugin_textdomain( 'rather-simple-background-slider', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-	}
 
 	/**
 	 * Registers block
