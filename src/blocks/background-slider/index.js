@@ -5,7 +5,7 @@ import {
 	G,
 	Path,
 	SVG,
-} from '@wordpress/components';
+} from '@wordpress/primitives';
 import {
 	registerBlockType
 } from '@wordpress/blocks';
