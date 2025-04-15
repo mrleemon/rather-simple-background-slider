@@ -4,11 +4,11 @@
   "license": "GPL-2.0-or-later",
   "main": "build/index.js",
   "dependencies": {
-    "npm-check-updates": "^17.1.15",
-    "swiper": "^11.2.5"
+    "npm-check-updates": "^17.1.18",
+    "swiper": "^11.2.6"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^30.13.0"
+    "@wordpress/scripts": "^30.15.0"
   },
   "scripts": {
     "build": "wp-scripts build",
