@@ -26,7 +26,7 @@ const transforms = {
 			},
 		},
 	],
-	"to": [
+	to: [
 		{
 			type: 'block',
 			blocks: ['core/image'],
