@@ -1,14 +1,14 @@
 {
-  "name": "rather-simple-background-slider-block",
+  "name": "rather-simple-background-slider",
   "version": "1.0.0",
   "license": "GPL-2.0-or-later",
   "main": "build/index.js",
   "dependencies": {
-    "npm-check-updates": "^19.3.1",
-    "swiper": "^12.0.3"
+    "swiper": "^12.1.1"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^31.3.0"
+    "@wordpress/scripts": "^31.4.0",
+    "dir-archiver": "^2.2.0"
   },
   "scripts": {
     "build": "wp-scripts build",
@@ -20,11 +20,11 @@
     "lint:md:docs": "wp-scripts lint-md-docs",
     "lint:pkg-json": "wp-scripts lint-pkg-json",
     "packages-update": "wp-scripts packages-update",
-    "plugin-zip": "wp-scripts plugin-zip",
     "start": "wp-scripts start",
     "test:e2e": "wp-scripts test-e2e",
     "test:unit": "wp-scripts test-unit-js",
     "make-pot": "wp i18n make-pot . languages/rather-simple-background-slider.pot",
-    "make-json": "wp i18n make-json languages --no-purge"
+    "make-json": "wp i18n make-json languages --no-purge",
+    "bundle": "dir-archiver --includebasedir --src . --dest ../rather-simple-background-slider.zip --exclude .git .gitattributes .gitignore node_modules package-lock.json package.json"
   }
 }
