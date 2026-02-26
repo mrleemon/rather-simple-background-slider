@@ -4,10 +4,10 @@
   "license": "GPL-2.0-or-later",
   "main": "build/index.js",
   "dependencies": {
-    "swiper": "^12.1.1"
+    "swiper": "^12.1.2"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^31.4.0",
+    "@wordpress/scripts": "^31.5.0",
     "dir-archiver": "^2.2.0"
   },
   "scripts": {
