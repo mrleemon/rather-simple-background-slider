@@ -12,7 +12,8 @@
 			"items": {
 				"type": "object"
 			},
-			"default": []
+			"default": [],
+			"role": "content"
 		},
 		"delay": {
 			"type": "integer",
