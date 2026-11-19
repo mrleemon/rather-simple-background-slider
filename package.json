@@ -10,6 +10,11 @@
     "@wordpress/scripts": "^37.2.0",
     "dir-archiver": "^4.0.0"
   },
+  "allowScripts": {
+    "@parcel/watcher": false,
+    "core-js": false,
+    "core-js-pure": false
+  },
   "scripts": {
     "build": "wp-scripts build",
     "check-engines": "wp-scripts check-engines",
